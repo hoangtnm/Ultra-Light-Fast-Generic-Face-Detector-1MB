@@ -7,8 +7,8 @@ import torch
 from torchstat import stat
 from torchsummary import summary
 
-from vision.ssd.mb_tiny_fd import create_mb_tiny_fd
-from vision.ssd.mb_tiny_RFB_fd import create_Mb_Tiny_RFB_fd
+from src.ssd.mb_tiny_fd import create_mb_tiny_fd
+from src.ssd.mb_tiny_RFB_fd import create_Mb_Tiny_RFB_fd
 
 device = "cpu"  # default cpu
 width = 320

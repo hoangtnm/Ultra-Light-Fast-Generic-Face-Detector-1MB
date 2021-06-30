@@ -1,9 +1,9 @@
 from paddle.nn import Conv2D, Sequential, LayerList, ReLU
 
-from vision.nn.mb_tiny_RFB import Mb_Tiny_RFB
-from vision.ssd.config import fd_config as config
-from vision.ssd.predictor import Predictor
-from vision.ssd.ssd import SSD
+from src.nn.mb_tiny_RFB import Mb_Tiny_RFB
+from src.ssd.config import fd_config as config
+from src.ssd.predictor import Predictor
+from src.ssd.ssd import SSD
 
 
 def SeperableConv2d(in_channels, out_channels, kernel_size=1, stride=1, padding=0):

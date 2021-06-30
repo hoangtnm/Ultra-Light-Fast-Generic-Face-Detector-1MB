@@ -7,7 +7,7 @@ import sys
 
 import cv2
 
-from vision.ssd.config.fd_config import define_img_size
+from src.ssd.config.fd_config import define_img_size
 
 parser = argparse.ArgumentParser(
     description='detect_imgs')
@@ -27,8 +27,8 @@ parser.add_argument('--test_device', default="cuda:0", type=str,
 args = parser.parse_args()
 define_img_size(args.input_size)  # must put define_img_size() before 'import create_mb_tiny_fd, create_mb_tiny_fd_predictor'
 
-from vision.ssd.mb_tiny_fd import create_mb_tiny_fd, create_mb_tiny_fd_predictor
-from vision.ssd.mb_tiny_RFB_fd import create_Mb_Tiny_RFB_fd, create_Mb_Tiny_RFB_fd_predictor
+from src.ssd.mb_tiny_fd import create_mb_tiny_fd, create_mb_tiny_fd_predictor
+from src.ssd.mb_tiny_RFB_fd import create_Mb_Tiny_RFB_fd, create_Mb_Tiny_RFB_fd_predictor
 
 result_path = "./detect_imgs_results"
 label_path = "./models/voc-model-labels.txt"

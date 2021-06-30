@@ -6,7 +6,7 @@ import paddle
 import paddle.nn as nn
 import paddle.nn.functional as F
 
-from vision.utils import box_utils
+from src.utils import box_utils
 
 GraphPath = namedtuple("GraphPath", ['s0', 'name', 's1'])
 

@@ -5,12 +5,12 @@ import sys
 
 import torch.onnx
 
-from vision.ssd.config.fd_config import define_img_size
+from src.ssd.config.fd_config import define_img_size
 
 input_img_size = 320  # define input size ,default optional(128/160/320/480/640/1280)
 define_img_size(input_img_size)
-from vision.ssd.mb_tiny_RFB_fd import create_Mb_Tiny_RFB_fd
-from vision.ssd.mb_tiny_fd import create_mb_tiny_fd
+from src.ssd.mb_tiny_RFB_fd import create_Mb_Tiny_RFB_fd
+from src.ssd.mb_tiny_fd import create_mb_tiny_fd
 
 # net_type = "slim"  # inference faster,lower precision
 net_type = "RFB"  # inference lower,higher precision

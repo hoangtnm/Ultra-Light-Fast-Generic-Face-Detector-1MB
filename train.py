@@ -12,10 +12,10 @@ from torch import nn
 from torch.optim.lr_scheduler import CosineAnnealingLR, MultiStepLR
 from torch.utils.data import DataLoader, ConcatDataset
 
-from vision.datasets.voc_dataset import VOCDataset
-from vision.nn.multibox_loss import MultiboxLoss
-from vision.ssd.config.fd_config import define_img_size
-from vision.utils.misc import str2bool, Timer, freeze_net_layers, store_labels
+from src.datasets.voc_dataset import VOCDataset
+from src.nn.multibox_loss import MultiboxLoss
+from src.ssd.config.fd_config import define_img_size
+from src.utils.misc import str2bool, Timer, freeze_net_layers, store_labels
 
 parser = argparse.ArgumentParser(
     description='train With Pytorch')
@@ -105,11 +105,11 @@ input_img_size = args.input_size  # define input size ,default optional(128/160/
 logging.info("inpu size :{}".format(input_img_size))
 define_img_size(input_img_size)  # must put define_img_size() before 'import fd_config'
 
-from vision.ssd.config import fd_config
-from vision.ssd.data_preprocessing import TrainAugmentation, TestTransform
-from vision.ssd.mb_tiny_RFB_fd import create_Mb_Tiny_RFB_fd
-from vision.ssd.mb_tiny_fd import create_mb_tiny_fd
-from vision.ssd.ssd import MatchPrior
+from src.ssd.config import fd_config
+from src.ssd.data_preprocessing import TrainAugmentation, TestTransform
+from src.ssd.mb_tiny_RFB_fd import create_Mb_Tiny_RFB_fd
+from src.ssd.mb_tiny_fd import create_mb_tiny_fd
+from src.ssd.ssd import MatchPrior
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() and args.use_cuda else "cpu")
 

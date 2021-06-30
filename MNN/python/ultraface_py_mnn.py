@@ -19,7 +19,7 @@ import numpy as np
 import torch
 
 sys.path.append('../../')
-import vision.utils.box_utils_numpy as box_utils
+import src.utils.box_utils_numpy as box_utils
 
 parser = argparse.ArgumentParser(description='run ultraface with MNN in py')
 parser.add_argument('--model_path', default="../model/version-RFB/RFB-320.mnn", type=str, help='model path')

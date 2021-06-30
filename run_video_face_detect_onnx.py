@@ -6,7 +6,7 @@ import time
 import cv2
 import numpy as np
 import onnx
-import vision.utils.box_utils_numpy as box_utils
+import src.utils.box_utils_numpy as box_utils
 from caffe2.python.onnx import backend
 
 # onnx runtime
